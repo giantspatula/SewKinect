@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SewKinect</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="static/css/simple-sidebar.css" rel="stylesheet">
+    <link href="static/css/cass.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">SewKinect</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#menu-toggle" id="menu-toggle">Toggle Menu</a></li>
+          </ul>
+            
+        </div>
+      </div>
+    </nav>
+
+    <div id="wrapper">
+
+<!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        SewKinect
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#kinect-modal">Kinect</a>
+                </li>
+                <li>
+                    <a href="#">Measurements</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+            </ul>
+        </div>
+<!-- /#sidebar-wrapper -->
+
+<!-- Kinect Modal -->
+        <div class="modal fade" id="kinect-modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <h4 class="modal-title" id="myModalLabel">Kinect Tutorial</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="/static/img/kinect.gif" width="100%"></img>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <a href="/kinect"><button id="modal-next" type="button" class="btn btn-primary">Ready!</button></a>
+                </div>
+            </div>
+          </div>
+        </div>
+<!-- /#Kinect Modal -->
+
+<!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+            <div class="row dumb-margin">
+                 <div class="col-lg-12">
+                <div>
+                <div>
+            </div>
+        </div>
+<!-- Row -->
+                <div class="row">
+                    <div class="col-md-7">
+                        <img id="sewDude" class="img-responsive" src="static/img/sew_dude.png"><img>
+                    </div>
+<!-- Measurement Panel -->
+                    <div class="col-md-5">
+                       <div class="panel panel-default">
+                            <div class="panel-body">
+<!-- Form Tabs -->              
+        <fieldset>                            
+        <form class="form-horizontal" id="measurement-form">
+        <ul style="margin-bottom: 12px" class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#custom-measurements" aria-controls="custom-measurements" role="tab" data-toggle="tab">Custom</a></li>
+        <li role="presentation"><a href="#standard-measurements" aria-controls="standard-measurements" role="tab" data-toggle="tab">Standard</a></li>
+        </ul>
+    <div class="tab-content">
+<!-- Custom Measurement Tab-->
+            <div role="tabpanel" class="tab-pane active" id="custom-measurements">
+<!-- Waist -->
+                    <div class="form-group">
+                         <label class="col-md-4 control-label" for="waist">Waist</label>  
+                            <div class="col-md-4">
+                                <input id="waist" name="waist" type="number" step="any" placeholder="" class="form-control input-md" required=""> 
+                            </div>
+                    </div>
+
+<!-- Hip -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="hip">Hip</label>  
+                            <div class="col-md-4">
+                                <input id="hip" name="hip" type="number" step="any" placeholder="" class="form-control input-md" required="">
+                            </div>
+                    </div>
+
+<!-- Thigh -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="thigh">Thigh</label>  
+                            <div class="col-md-4">
+                                 <input id="thigh" name="thigh" type="number" step="any" placeholder="" class="form-control input-md" required="">
+                        
+                            </div>
+                    </div>
+
+<!-- Waist-to-Hip -->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" for="waist-to-hip">Waist to Hip</label>  
+                      <div class="col-md-4">
+                      <input id="waist-to-hip" name="waist-to-hip" type="number" step="any" placeholder="" class="form-control input-md" required="">
+                        
+                      </div>
+                    </div>
+
+<!-- Waist-to-knee -->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" for="waist-to-knee">Waist to Knee</label>  
+                      <div class="col-md-4">
+                      <input id="waist-to-knee" name="waist-to-knee" type="number" step="any" placeholder="" class="form-control input-md" required="">
+                        
+                      </div>
+                    </div>
+
+<!-- Waist-to-floor -->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" for="waist-to-floor">Waist to Floor</label>  
+                      <div class="col-md-4">
+                      <input id="waist-to-floor" name="waist-to-floor" type="number" step="any" placeholder="" class="form-control input-md" required="">
+                        
+                      </div>
+                    </div>
+
+<!-- Button (Double) -->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" for="submit"></label>
+                      <div class="col-md-6">
+                        <button id="submit" name="custom-submit" class="btn btn-info">Submit</button>
+                        <button id="reset" name="custom-reset" class="btn btn-danger">Reset</button>
+                      </div>
+                    </div>
+            </div>
+<!-- /End Custom Measurement Tab -->
+
+<!-- Standard Measurements tab -->
+         <div role="tabpanel" class="tab-pane" id="standard-measurements">
+            <form class="form-horizontal dumb-margin" id="standard-form">
+                <fieldset>
+                <!-- Select Basic -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="select-size">US Pattern Size</label>
+                  <div class="col-md-6">
+                    <select id="select-size" name="select-size" class="form-control">
+                      <option value="6">Size 6</option>
+                      <option value="8">Size 8</option>
+                      <option value="10">Size 10</option>
+                      <option value="12">Size 12</option>
+                      <option value="14">Size 14</option>
+                      <option value="16">Size 16</option>
+                    </select>
+                  </div>
+                </div>
+
+                <table class="table table-condensed cass-table">
+                <tr id="standard-waist">
+                    <th>Waist</th>
+                    <td></td> 
+                </tr>
+                <tr id="standard-hip">
+                    <th>Hip</th>
+                    <td></td> 
+                </tr>
+                <tr id="standard-thigh">
+                    <th>Thigh</th>
+                    <td></td> 
+                </tr>
+                <tr id="standard-waist-to-hip">
+                    <th>Waist to Hip</th>
+                    <td></td> 
+                </tr>
+                <tr id="standard-waist-to-knee">
+                    <th>Waist to Knee</th>
+                    <td></td> 
+                </tr>
+                <tr id="standard-waist-to-floor">
+                    <th>Waist to Floor</th>
+                    <td></td> 
+                </tr>
+                </table>
+
+                <!-- Button -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="standard-submit"></label>
+                  <div style="float: right" class="col-md-4">
+                    <button id="standard-submit" name="standard-submit" class="btn btn-default">Submit</button>
+                  </div>
+                </div>
+
+                </fieldset>
+                </form>
+                         </div>
+        </div>
+<!-- End Tab Content -->
+</fieldset>
+</form>
+                            </div>
+                        </div>
+                    </div>
+        <!-- /#Measurement Panel -->
+                </div>
+        <!-- /#Row -->
+                  <div class="row patterns" id="#patterns">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="panel panel-primary" id="circle-skirt">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-comments fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div id="circle-img"></div>
+                                        <div>Circle Skirt!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Get Pattern</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="panel panel-green" id="a-line-skirt">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-tasks fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div id="skirt-img"></div>
+                                        <div>A-Line Skirt</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Get Pattern</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="panel panel-yellow" id="leggings">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-shopping-cart fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div id="leggings-img"></div>
+                                        <div>Leggings!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="text-center">Get Pattern</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                  
+                </div>
+            <!-- /.row -->
+            <!-- Bottom Row -->
+            <div class="row">
+            </div>
+            <!-- /#bottom row -->
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/js/bootstrap.min.js"></script>
+    
+    <!-- custom JavaScript -->
+    <script src="static/js/cass.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

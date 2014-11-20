@@ -1,0 +1,10 @@
+{
+	“size”	: 8;
+	“waist” : 23.5;
+	“hip” :	34.5;
+    “thigh” : 19.5;
+	“waistToHip” :	8;
+	“waistToKnee” :	22.125;
+	“waistToFloor” : 39.125;
+	"girth" : 27.125;
+}
