@@ -33,23 +33,22 @@ Also relies on default Python libraries listed below:
 Kinect Install Instructions
 ==================
 1. libusb
-  Install with homebrew libusb
+- Install with homebrew libusb
 2. libfreenect
-  Install with homebrew libfreenect
+- Install with homebrew libfreenect
 3. OpenNI
-  Available at https://mega.co.nz/#!Hc5kwAiZ!uJiLY4180QGXjKp7sze8S3eDVU71NHiMrXRq0TA7QpU
-   (installs by coping some libs)
+- Available at https://mega.co.nz/#!Hc5kwAiZ!uJiLY4180QGXjKp7sze8S3eDVU71NHiMrXRq0TA7QpU
 4. SensorKinect
-  git clone https://github.com/avin2/SensorKinect.git
-  Uncompress Bin/SensorKinect093-Bin-MacOSX-v*tar.bz2
-  Run sudo ./install.sh
+- git clone https://github.com/avin2/SensorKinect.git
+Uncompress Bin/SensorKinect093-Bin-MacOSX-v*tar.bz2
+Run sudo ./install.sh
 4. NITE
-  Available at https://mega.co.nz/#!nZYwgJiQ!m091FXc4U6GwjRfpHK-puPvBjkHdWc6KmQH-_RzXfOw
+- Available at https://mega.co.nz/#!nZYwgJiQ!m091FXc4U6GwjRfpHK-puPvBjkHdWc6KmQH-_RzXfOw
   sudo ./install.sh
   cd ~/Kinect/nite-bin-macosx-v1.5.0.2/Data
   cp *.xml ../../SensorKinect/Data
 5. PyOpenNI
-  git clone https://github.com/jmendeth/PyOpenNI.git
+- git clone https://github.com/jmendeth/PyOpenNI.git
   mkdir PyOpenNI-build
   cd PyOpenNI-build
   cmake ../PyOpenNI
