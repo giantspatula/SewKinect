@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+
+{% block body %}
+<body>
+
+ <div id="page-content-wrapper">
+            <div class="container-fluid">   
+            <div class="row dumb-margin">
+                 <div class="col-lg-12">
+                <div>
+                <div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>About - SewKinect</h1>
+                        <hr class="small">
+                        <span class="subheading"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+   <div class="container-fluid">
+	<div class="row clearfix">
+		<div class="col-md-8 col-lg-offset-2 column">
+			<h3>
+				Custom Sewing Patterns, Custom Measurements
+			</h3>
+			<p>
+				SewKinect was inspired by an absense of basic pattern generation software for sewers. Pattern drafting is key to custom-fit garments and costumes and relies on a geometric understanding three-dimensional body curves. Traditionally, patterns are drafted for individuals on paper at full scale, a huge inconvenience of time and space. SewKinect aims to streamline bespoke pattern development by creating a digital pipeline from measurements to printable
+			</p>
+		</div>
+	</div>
+	<div class="row dumb-margin">
+        <div class="col-lg-12">
+    <div>
+	<div class="row clearfix">
+		<div class="col-sm-10 col-sm-offset-2 column">
+				<img width="80%" src="static/img/kinect.jpg" />
+			</div>
+		</div>
+	<div class="row dumb-margin">
+        <div class="col-lg-12">
+    <div>
+	<div class="row clearfix">
+		<div class="col-md-4  col-lg-offset-2 column">
+			<dl class="dl-horizontal">
+				<dt>
+					libfreenect
+				</dt>
+				<dd>
+					Open source kinect/depth camera drivers.
+				</dd>
+				<dt>
+					OpenNI
+				</dt>
+				<dd>
+					Open source Kinect library, no longer maintained.
+				</dd>
+				<dt>
+					NITE
+				</dt>
+				<dd>
+					OpenNI middleware, for Kinect gestures and skeleton tracking.
+				</dd>
+				<dt>
+					PyOpenNI
+				</dt>
+				<dd>
+					Python OpenNI/NITE bindings.
+				</dd>
+				<dt>
+					PyGame
+				</dt>
+				<dd>
+					Python game development library
+				</dd>
+			</dl>
+		</div>
+	
+		<div class="col-md-4 column">
+			<p>
+				SewKinect uses OpenNI/NITE to interface with a <strong>Microsoft Kinect</strong>. The Kinect is an afordable depth camera originally packaged with the XBox 360 for use with gesture-based gaming. While Microsoft supports a SDK for Kinect developers, it is currently Windows only. 
+			</p>
+			<p>
+				OpenSource projects such as OpenNI aimed to increase access to Kinect development, but have since been discontinued. PyOpenNI and PyGame are used to power SewKinect's Kinect app.
+			</p>
+		</div>
+	</div>
+
+	<div class="row dumb-margin">
+                 <div class="col-lg-12">
+                <div>
+	<div class="row clearfix">
+		<div class="col-md-8 col-lg-offset-2 column">
+			<p>
+				Body measurements from the Kinect are posted to the SewKinect Flask server and then displayed along with the other options for pattern drafting. 
+			</p>
+			<p>
+				Body measurements are calculated using a point cloud gathered the Kinect <strong>depth camera</strong>. By fitting ellipses to the depth information at coordinated corresponding to the Kinect joint skeleton, we can approximate the user's circumference. 
+			</p>
+		</div>
+	</div>
+	<div class="row dumb-margin">
+                 <div class="col-lg-12">
+    <div>
+	<div class="row clearfix">
+		<div class="col-md-4 col-lg-offset-2 column">
+			<img src="static/img/leggingcomparison.gif" height="600px"/>
+		</div>
+		<div class="col-md-4 column">
+			<img alt="140x140" src="http://lorempixel.com/140/140/" />
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-8 col-lg-offset-2 column">
+			<h3>
+				h3. Lorem ipsum dolor sit amet.
+			</h3>
+			<dl>
+				<dt>
+					Installation Reference
+				</dt>
+				<dd>
+					http://justinfx.com/2012/06/21/getting-started-with-xbox-360-kinect-on-osx/
+				</dd>
+				<dd>
+					http://developkinect.com/resource/mac-os-x/install-openni-nite-and-sensorkinect-mac-os-x
+				</dd>
+				<dt>
+					Cairo
+				</dt>
+				<dd>
+					Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+				</dd>
+				<dt>
+					Pattern Drafting Instructions
+				</dt>
+				<dd>
+					Etiam porta sem malesuada magna mollis euismod.
+				</dd>
+				<dd>
+					Donec id elit non mi porta gravida at eget metus.
+				</dd>
+				<dd>
+					Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+				</dd>
+				<dt>
+					Body Measurements
+				</dt>
+				<dd>
+					Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+				</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<!-- jQuery -->
+    <script src="static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/js/bootstrap.min.js"></script>
+    
+    <!-- custom JavaScript -->
+    <script src="static/js/cass.js"></script>
+    <script src="static/js/fileinput.min.js" type="text/javascript"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+               
+</body>
+
+{% endblock %}

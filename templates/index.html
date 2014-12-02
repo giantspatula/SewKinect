@@ -1,99 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>SewKinect</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="static/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="static/css/simple-sidebar.css" rel="stylesheet">
-    <link href="static/css/cass.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
+{% block body %}
 <body>
     
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">SewKinect</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#menu-toggle" id="menu-toggle">Toggle Menu</a></li>
-          </ul>
-            
-        </div>
-      </div>
-    </nav>
-
-    <div id="wrapper">
-
-<!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        SewKinect
-                    </a>
-                </li>
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#kinect-modal">Kinect</a>
-                </li>
-                <li>
-                    <a href="#">Measurements</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-            </ul>
-        </div>
-<!-- /#sidebar-wrapper -->
-
-<!-- Kinect Modal -->
-        <div class="modal fade" id="kinect-modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h4 class="modal-title" id="myModalLabel">Kinect Tutorial</h4>
-                    </div>
-                    <div class="modal-body">
-                        <img src="/static/img/kinect.gif" width="100%"></img>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                        <a href="/kinect"><button id="modal-next" type="button" class="btn btn-primary">Ready!</button></a>
-                </div>
-            </div>
-          </div>
-        </div>
-<!-- /#Kinect Modal -->
-
 <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="container-fluid">
+            <div class="container-fluid">   
             <div class="row dumb-margin">
                  <div class="col-lg-12">
                 <div>
@@ -102,25 +14,33 @@
         </div>
 <!-- Row -->
                 <div class="row">
-                    <div class="col-md-7">
-                        <img id="sewDude" class="img-responsive" src="static/img/sew_dude.png"><img>
+                    <div class="col-md-6">
+                         <div class="panel panel-primary">
+                            <div class="panel-body" style="min-height:470px; max-height:470px">
+                        <img style="max-height:440px" id="sewDude" class="img-responsive" src="static/img/sew_dude.png"><img>
+                            </div>
+                        </div>
                     </div>
 <!-- Measurement Panel -->
-                    <div class="col-md-5">
-                       <div class="panel panel-default">
-                            <div class="panel-body">
+                    <div class="col-md-6">
+                       <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <span>Measurements</span>
+                        </div>
+                            <div class="panel-body" style="min-height:429px">
 <!-- Form Tabs -->              
         <fieldset>                            
-        <form class="form-horizontal" id="measurement-form">
         <ul style="margin-bottom: 12px" class="nav nav-tabs">
         <li role="presentation" class="active"><a href="#custom-measurements" aria-controls="custom-measurements" role="tab" data-toggle="tab">Custom</a></li>
         <li role="presentation"><a href="#standard-measurements" aria-controls="standard-measurements" role="tab" data-toggle="tab">Standard</a></li>
+        <li role="presentation"><a href="#kinect-measurements" aria-controls="kinect-measurements" id="kinect-click" role="tab" data-toggle="tab">Kinect</a></li>
         </ul>
     <div class="tab-content">
 <!-- Custom Measurement Tab-->
             <div role="tabpanel" class="tab-pane active" id="custom-measurements">
+            <form class ="form-horizontal" id="custom-measurements" name="custom-measurements">
 <!-- Waist -->
-                    <div class="form-group">
+                    <div class="form-group waist-hover">
                          <label class="col-md-4 control-label" for="waist">Waist</label>  
                             <div class="col-md-4">
                                 <input id="waist" name="waist" type="number" step="any" placeholder="" class="form-control input-md" required=""> 
@@ -128,7 +48,7 @@
                     </div>
 
 <!-- Hip -->
-                    <div class="form-group">
+                    <div class="form-group hip-hover">
                         <label class="col-md-4 control-label" for="hip">Hip</label>  
                             <div class="col-md-4">
                                 <input id="hip" name="hip" type="number" step="any" placeholder="" class="form-control input-md" required="">
@@ -136,7 +56,7 @@
                     </div>
 
 <!-- Thigh -->
-                    <div class="form-group">
+                    <div class="form-group thigh-hover">
                         <label class="col-md-4 control-label" for="thigh">Thigh</label>  
                             <div class="col-md-4">
                                  <input id="thigh" name="thigh" type="number" step="any" placeholder="" class="form-control input-md" required="">
@@ -145,7 +65,7 @@
                     </div>
 
 <!-- Waist-to-Hip -->
-                    <div class="form-group">
+                    <div class="form-group waist-to-hip-hover">
                       <label class="col-md-4 control-label" for="waist-to-hip">Waist to Hip</label>  
                       <div class="col-md-4">
                       <input id="waist-to-hip" name="waist-to-hip" type="number" step="any" placeholder="" class="form-control input-md" required="">
@@ -154,7 +74,7 @@
                     </div>
 
 <!-- Waist-to-knee -->
-                    <div class="form-group">
+                    <div class="form-group waist-to-knee-hover">
                       <label class="col-md-4 control-label" for="waist-to-knee">Waist to Knee</label>  
                       <div class="col-md-4">
                       <input id="waist-to-knee" name="waist-to-knee" type="number" step="any" placeholder="" class="form-control input-md" required="">
@@ -163,7 +83,7 @@
                     </div>
 
 <!-- Waist-to-floor -->
-                    <div class="form-group">
+                    <div class="form-group waist-to-floor-hover">
                       <label class="col-md-4 control-label" for="waist-to-floor">Waist to Floor</label>  
                       <div class="col-md-4">
                       <input id="waist-to-floor" name="waist-to-floor" type="number" step="any" placeholder="" class="form-control input-md" required="">
@@ -171,26 +91,27 @@
                       </div>
                     </div>
 
-<!-- Button (Double) -->
+<!-- Button  -->
                     <div class="form-group">
-                      <label class="col-md-4 control-label" for="submit"></label>
-                      <div class="col-md-6">
-                        <button id="submit" name="custom-submit" class="btn btn-info">Submit</button>
-                        <button id="reset" name="custom-reset" class="btn btn-danger">Reset</button>
+                    <div class = "col-md-8">
+                    </div>
+                      <div class="col-md-4">
+                        <input type="submit" style="width:100px" id="custom-submit" name="custom-submit" class="btn btn-primary"></input>
                       </div>
                     </div>
             </div>
+        </form>
 <!-- /End Custom Measurement Tab -->
 
 <!-- Standard Measurements tab -->
          <div role="tabpanel" class="tab-pane" id="standard-measurements">
-            <form class="form-horizontal dumb-margin" id="standard-form">
-                <fieldset>
+            <form class="form-horizontal dumb-margin" name="standard-form" id="standard-form">
                 <!-- Select Basic -->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="select-size">US Pattern Size</label>
                   <div class="col-md-6">
                     <select id="select-size" name="select-size" class="form-control">
+                      <option value="0"></option>
                       <option value="6">Size 6</option>
                       <option value="8">Size 8</option>
                       <option value="10">Size 10</option>
@@ -202,57 +123,105 @@
                 </div>
 
                 <table class="table table-condensed cass-table">
-                <tr id="standard-waist">
+                <tr class="waist-hover">
                     <th>Waist</th>
-                    <td></td> 
+                    <td id="standard-waist"></td> 
                 </tr>
-                <tr id="standard-hip">
+                <tr class="hip-hover">
                     <th>Hip</th>
-                    <td></td> 
+                    <td id="standard-hip"></td> 
                 </tr>
-                <tr id="standard-thigh">
+                <tr class="thigh-hover">
                     <th>Thigh</th>
-                    <td></td> 
+                    <td id="standard-thigh"></td> 
                 </tr>
-                <tr id="standard-waist-to-hip">
+                <tr class="waist-to-hip-hover">
                     <th>Waist to Hip</th>
-                    <td></td> 
+                    <td id="standard-waist-to-hip"></td> 
                 </tr>
-                <tr id="standard-waist-to-knee">
+                <tr class="waist-to-knee-hover">
                     <th>Waist to Knee</th>
-                    <td></td> 
+                    <td id="standard-waist-to-knee"></td> 
                 </tr>
-                <tr id="standard-waist-to-floor">
+                <tr class="waist-to-floor-hover">
                     <th>Waist to Floor</th>
-                    <td></td> 
+                    <td id="standard-waist-to-floor"></td> 
                 </tr>
                 </table>
 
                 <!-- Button -->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="standard-submit"></label>
                   <div style="float: right" class="col-md-4">
-                    <button id="standard-submit" name="standard-submit" class="btn btn-default">Submit</button>
+                    <input type="submit" style="width:100px" id="standard-submit" name="standard-submit" class="btn btn-primary"></input>
                   </div>
                 </div>
 
-                </fieldset>
+
                 </form>
-                         </div>
+            </div>
+<!-- /End Standard Tab -->
+<!-- Kinect Tab -->
+            <div role="tabpanel" class="tab-pane" id="kinect-measurements">
+            <form class="form-horizontal dumb-margin" name="kinect-form" id="kinect-form">
+        <!-- Select Kinect -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="select-kinect">Kinect Data</label>
+                  <div class="col-md-6">
+                    <select id="select-kinect" name="select-kinect" class="form-control">
+                      <option value="default"></option>
+                    </select>
+                  </div>
+                </div>
+
+                <table class="table table-condensed cass-table">
+                <tr class="waist-hover">
+                    <th>Waist</th>
+                    <td id="kinect-waist"></td> 
+                </tr>
+                <tr class="hip-hover">
+                    <th>Hip</th>
+                    <td id="kinect-hip"></td> 
+                </tr>
+                <tr class="thigh-hover">
+                    <th>Thigh</th>
+                    <td id="kinect-thigh"></td> 
+                </tr>
+                <tr class="waist-to-hip-hover">
+                    <th>Waist to Hip</th>
+                    <td id="kinect-waist-to-hip"></td> 
+                </tr>
+                <tr class="waist-to-knee-hover">
+                    <th>Waist to Knee</th>
+                    <td id="kinect-waist-to-knee"></td> 
+                </tr>
+                <tr class="waist-to-floor-hover">
+                    <th>Waist to Floor</th>
+                    <td id="kinect-waist-to-floor"></td> 
+                </tr>
+                </table>
+
+                <!-- Button -->
+                <div class="form-group">
+                  <div style="float: right" class="col-md-4">
+                    <input type="submit" style="width:100px" id="kinect-submit" name="kinect-submit" class="btn btn-primary"></input>
+                  </div>
+                </div>
+
+
+                </form>
         </div>
-<!-- End Tab Content -->
-</fieldset>
-</form>
+    </fieldset>
+
                             </div>
                         </div>
                     </div>
-        <!-- /#Measurement Panel -->
+    <!-- /#Measurement Panel -->
                 </div>
         <!-- /#Row -->
-                  <div class="row patterns" id="#patterns">
+                  <div class="row patterns" id="patterns">
                     <div class="col-lg-4 col-md-6">
                         <div class="panel panel-primary" id="circle-skirt">
-                            <div class="panel-heading">
+                            <div class="panel-heading cass-panel">
                                 <div class="row">
                                     <div class="col-xs-3">
                                         <i class="fa fa-comments fa-5x"></i>
@@ -274,7 +243,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="panel panel-green" id="a-line-skirt">
-                            <div class="panel-heading">
+                            <div class="panel-heading cass-panel">
                                 <div class="row">
                                     <div class="col-xs-3">
                                         <i class="fa fa-tasks fa-5x"></i>
@@ -288,7 +257,6 @@
                             <a href="#">
                                 <div class="panel-footer">
                                     <span class="pull-left">Get Pattern</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
                             </a>
@@ -296,7 +264,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="panel panel-yellow" id="leggings">
-                            <div class="panel-heading">
+                            <div class="panel-heading cass-panel">
                                 <div class="row">
                                     <div class="col-xs-3">
                                         <i class="fa fa-shopping-cart fa-5x"></i>
@@ -338,6 +306,7 @@
     
     <!-- custom JavaScript -->
     <script src="static/js/cass.js"></script>
+    <script src="static/js/fileinput.min.js" type="text/javascript"></script>
 
     <!-- Menu Toggle Script -->
     <script>
@@ -348,5 +317,5 @@
     </script>
 
 </body>
+{% endblock %}
 
-</html>
