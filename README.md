@@ -13,7 +13,6 @@ SewKinect consists of a Kinect/PyGame app and a Flask application. The Kinect ap
 - SensorKinect
 - NITE
 - PyOpenNI
-
 - Flask
 - Jinja2
 - PyCairo
