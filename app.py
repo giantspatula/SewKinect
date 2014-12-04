@@ -7,10 +7,11 @@ import pickle
 import base64
 import calculations
 import random
+import os 
 
 app = Flask(__name__)
 
-app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
+app.secret_key = os.environ.get('FLASKKEY')
 
 kinect_data = {}
 
@@ -81,4 +82,4 @@ def calculate():
 	return "200 OK"
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	app.run()
