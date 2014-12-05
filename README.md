@@ -6,7 +6,7 @@ Final Hackbright Project
 SewKinect was inspired by an absense of basic pattern generation software for sewers. Pattern drafting is key to custom-fit garments and costumes and relies on a geometric understanding three-dimensional body curves. Traditionally, patterns are drafted for individuals on paper at full scale, a huge inconvenience of time and space. SewKinect aims to streamline bespoke pattern development by creating a digital pipeline from measurements to printable pdf slopers.
 
 ###Video Demo
-![ScreenShot](https://cloud.githubusercontent.com/assets/4644116/5321664/3d01d242-7c72-11e4-9419-8f8d9fd2acc1.png)](http://youtu.be/Qnv36XxjC98)
+[![ScreenShot](https://cloud.githubusercontent.com/assets/4644116/5321664/3d01d242-7c72-11e4-9419-8f8d9fd2acc1.png)](http://youtu.be/Qnv36XxjC98)
 
 SewKinect consists of a Kinect/PyGame app and a Flask application. The Kinect app posts scan data to the Flask server. SewKinect was developed on OSX and the technology required is as follows: 
 
@@ -35,29 +35,29 @@ Also relies on default Python libraries listed below:
 
 Kinect Install Instructions
 ==================
-1. libusb 
+ libusb 
 ```sh
   homebrew libusb
 ```
-2. libfreenect 
+ libfreenect 
 ```sh
   homebrew libfreenect
 ```
-3. OpenNI - Available at https://mega.co.nz/#!Hc5kwAiZ!uJiLY4180QGXjKp7sze8S3eDVU71NHiMrXRq0TA7QpU
+ OpenNI - Available at https://mega.co.nz/#!Hc5kwAiZ!uJiLY4180QGXjKp7sze8S3eDVU71NHiMrXRq0TA7QpU
 
-4. SensorKinect - git clone https://github.com/avin2/SensorKinect.git
+ SensorKinect - git clone https://github.com/avin2/SensorKinect.git
     Uncompress Bin/SensorKinect093-Bin-MacOSX-v*tar.bz2.
 ```sh
  $ sudo ./install.sh.
 ```
-5. NITE - Available at https://mega.co.nz/#!nZYwgJiQ!m091FXc4U6GwjRfpHK-puPvBjkHdWc6KmQH-_RzXfOw.
+ NITE - Available at https://mega.co.nz/#!nZYwgJiQ!m091FXc4U6GwjRfpHK-puPvBjkHdWc6KmQH-_RzXfOw.
 
  ```sh
  $ sudo ./install.sh.
  $ cd ~/Kinect/nite-bin-macosx-v1.5.0.2/Data.
  $ cp *.xml ../../SensorKinect/Data.
 ```
-6. PyOpenNI - 
+ PyOpenNI - 
  
  ```sh
 $ git clone https://github.com/jmendeth/PyOpenNI.git
