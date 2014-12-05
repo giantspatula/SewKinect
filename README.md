@@ -6,9 +6,7 @@ Final Hackbright Project
 SewKinect was inspired by an absense of basic pattern generation software for sewers. Pattern drafting is key to custom-fit garments and costumes and relies on a geometric understanding three-dimensional body curves. Traditionally, patterns are drafted for individuals on paper at full scale, a huge inconvenience of time and space. SewKinect aims to streamline bespoke pattern development by creating a digital pipeline from measurements to printable pdf slopers.
 
 ###Video Demo
-<div align="center">
-<iframe width="420" height="315" src="//www.youtube.com/embed/Qnv36XxjC98?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-</div>
+![ScreenShot](https://cloud.githubusercontent.com/assets/4644116/5321664/3d01d242-7c72-11e4-9419-8f8d9fd2acc1.png)](http://youtu.be/Qnv36XxjC98)
 
 SewKinect consists of a Kinect/PyGame app and a Flask application. The Kinect app posts scan data to the Flask server. SewKinect was developed on OSX and the technology required is as follows: 
 
