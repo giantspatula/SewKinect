@@ -375,13 +375,6 @@ class CalculationObject():
 		res2=np.sqrt(abs(up/down2))
 		return np.array([res1, res2])
 
-	def measure_ellipse(self, array):
-		""" approdimentation of permiter of ellipse defined by a np array
-		axis1 = array[0]
-		axis2 = array[1] """
-
-		pass
-
 	def exact_measure(self, array):
 		""" approdimentation of permiter of ellipse defined by a np array
 		axis1 = array[0]
