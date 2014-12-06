@@ -225,8 +225,8 @@ class CalculationObject():
 
 	def points_on_a_plane(self, plane, point_cloud):
 		""" takes a joint plane and returns a list of points from the point_cloud that intersect that plane 
-		correct usage is plane_point_intersect(waist, front_and_back_cloud) 
-		all joint planes are assumed be dictionaries with "O", "N", "x", "y" prointing to vectors 
+		correct usage is points_on_a_plane(waist, front_and_back_cloud) 
+		all joint planes are assumed be dictionaries with "O", "N", "x", "y" pointing to vectors 
 		point_cloud is a list of lists"""
 
 		# a point is a good point if it is within some distance e of the plane defined by a point O and normal N
