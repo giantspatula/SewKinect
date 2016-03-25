@@ -8,7 +8,7 @@ SewKinect was inspired by an absense of basic pattern generation software for se
 ###Video Demo
 [![ScreenShot](https://cloud.githubusercontent.com/assets/4644116/5321664/3d01d242-7c72-11e4-9419-8f8d9fd2acc1.png)](http://youtu.be/Qnv36XxjC98)
 
-SewKinect consists of a Kinect/PyGame app and a Flask application. The Kinect app posts scan data to the Flask server. SewKinect was developed on OSX and the technology required is as follows: 
+SewKinect consists of a Kinect/PyGame app and a Flask application. The Kinect app posts scan data to the Flask server. SewKinect was developed on OSX 10.9 and the technology required is as follows: 
 
 - libusb
 - libfreenect
@@ -35,6 +35,8 @@ Also relies on default Python libraries listed below:
 
 Kinect Install Instructions
 ==================
+```PLEASE NOTE: These are the install instructions for OS 10.9 and have not been updated for newer version of OSX. Some of the open source Kinect projects may no longer be maintained.```
+
  libusb 
 ```sh
   homebrew libusb
