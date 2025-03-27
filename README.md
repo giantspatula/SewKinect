@@ -1,8 +1,5 @@
 SewKinect
 =========
-
-Final Hackbright Project
-
 SewKinect was inspired by an absense of basic pattern generation software for sewers. Pattern drafting is key to custom-fit garments and costumes and relies on a geometric understanding three-dimensional body curves. Traditionally, patterns are drafted for individuals on paper at full scale, a huge inconvenience of time and space. SewKinect aims to streamline bespoke pattern development by creating a digital pipeline from measurements to printable pdf slopers.
 
 ###Video Demo
